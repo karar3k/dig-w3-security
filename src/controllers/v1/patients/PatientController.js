@@ -1,6 +1,6 @@
 const Patient = require('../../../models/Patient')
 const {History} = require('../../../models/History')
-
+const {validationResult} = require('express-validator')
 const {success, error} = require('../../../utils/responser')
 
 const getAllPatients = async (req, res)=>{

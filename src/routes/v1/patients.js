@@ -14,12 +14,12 @@ router.put('/:id', updatePatient);
 router.get('/:id/history', getHistoryOfPatient);
 router.post(`/`, createPatient);
 router.post(`/:id/history`, newHistory);
-router.post(`/:id/history`,[
-    uploadFile,
-    check('file').custom((value, { req }) => {
-    if (!req.file) throw new Error("File is required");
-     return true;
-    }
-)],newHistory);
+// router.post(`/:id/history`,[
+//     uploadFile,
+//     check('file').custom((value, { req }) => {
+//     if (!req.file) throw new Error("File is required");
+//      return true;
+//     }
+// )],newHistory);
 
 module.exports = router;
